@@ -1,0 +1,42 @@
+{
+  "name": "personal-assistant",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "会成长的个人助手 — NJU 生成式软件工程 Lab1",
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=20.16.0"
+  },
+  "packageManagerComment": "见 .nvmrc / engines；跨平台统一使用 pnpm",
+  "scripts": {
+    "typecheck": "pnpm -r typecheck",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "dev": "pnpm --filter @pa/core dev",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@types/node": "^20.16.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.15.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml,css,scss}": [
+      "prettier --write"
+    ]
+  }
+}

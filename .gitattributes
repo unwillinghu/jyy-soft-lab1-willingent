@@ -1,0 +1,20 @@
+# 统一使用 LF，避免 Windows/Mac/Linux 迁移时行尾抖动
+* text=auto eol=lf
+
+# 显式声明二进制，禁止 Git 触碰
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.pdf binary
+*.zip binary
+*.sqlite binary
+
+# 这些文件永远不做 diff
+pnpm-lock.yaml -diff linguist-generated
+*.min.js linguist-generated

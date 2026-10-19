@@ -1,0 +1,18 @@
+{
+  "name": "@pa/cli",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "pa": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pa/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
