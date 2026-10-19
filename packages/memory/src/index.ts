@@ -1,0 +1,6 @@
+export { openDb, type Db } from './db'
+export { indexMemory, type IndexStats } from './indexer'
+export { searchMemory, type SearchResult, type SearchOptions } from './search'
+export { listDocuments, type DocumentInfo } from './docs'
+export { parseMarkdown, type MemoryDoc, type MemorySection } from './markdown'
+export { toSearchText, latexToPlain, hasLatex } from './latex'
