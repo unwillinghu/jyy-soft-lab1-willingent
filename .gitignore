@@ -11,14 +11,40 @@ dist/
 .env.*
 !.env.example
 data/
-*.sqlite
-*.sqlite-*
-*.db
 
 # logs
 *.log
 npm-debug.log*
 pnpm-debug.log*
+
+# ============================================================
+# 隐私围栏 —— 以下内容绝不入库（Public 仓库尤其重要）
+# ============================================================
+
+# 个人数据库：只保留约定说明，真实资料本地保存 / 放私有仓库
+memory/*
+!memory/README.md
+
+# 浏览器登录态与 Cookie（ehall / smail 会话，泄露=账号被接管）
+.auth/
+**/storage-state.json
+**/storageState.json
+**/cookies.json
+*.cookies.json
+
+# 邮件与运行时缓存（可能含正文、附件）
+cache/
+*.eml
+*.mbox
+
+# 索引与导出（可能含个人数据副本）
+*.sqlite
+*.sqlite-*
+*.db
+exports/
+backup/
+
+# ============================================================
 
 # editor / os
 .DS_Store
