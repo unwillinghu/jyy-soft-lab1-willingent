@@ -11,11 +11,13 @@
   "packageManagerComment": "见 .nvmrc / engines；跨平台统一使用 pnpm",
   "scripts": {
     "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r --if-present test",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "dev": "pnpm --filter @pa/core dev",
+    "pa": "pnpm --filter @pa/cli exec tsx src/index.ts",
     "prepare": "husky"
   },
   "devDependencies": {

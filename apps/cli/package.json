@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@pa/memory": "workspace:*",
     "@pa/shared": "workspace:*"
   },
   "devDependencies": {
